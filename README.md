@@ -17,7 +17,7 @@ Selenium-Colab File Downloader is an automated Selenium-based script designed to
 - Selenium WebDriver
 - Google Drive access
 
-## Installation
+## Usage
 
 ### 1. Install Dependencies
 ```bash
@@ -32,14 +32,8 @@ from google.colab import drive
 drive.mount('/content/gdrive')
 ```
 
-# Usage
-
-## 1. Dependencies and Imports
+### 3. Dependencies and Imports
 ```python
-# Essential library for web automation
-!pip install selenium
-!apt update
-!apt install chromium-chromedriver
 
 # Import required libraries
 from google.colab import drive
@@ -58,7 +52,7 @@ from selenium.webdriver.common.by import By
 - `webdriver`: Selenium's core automation class
 - `By`: Locate web elements by different attributes
 
-## 2. Chrome Options Configuration
+### 4. Chrome Options Configuration
 ```python
 # Configure Chrome options for headless execution
 options = webdriver.ChromeOptions()
@@ -81,14 +75,14 @@ options.add_experimental_option("prefs", prefs)  # Apply download preferences
 - `disable-dev-shm-usage`: Resolves resource constraints
 - Download preferences set to automatic, direct-to-Drive download
 
-## 3. WebDriver Initialization
+### 5. WebDriver Initialization
 ```python
 # Initialize Chrome WebDriver with configured options
 driver = webdriver.Chrome(options=options)
 ```
 Creates a Chrome browser instance with predefined settings
 
-## 4. Login Process
+### 6. Login Process
 ```python
 # Navigate to login page
 login_url = input("Enter the login page URL: ")
@@ -120,7 +114,7 @@ time.sleep(5)
 4. Click login button
 5. Wait for authentication
 
-## 5. Download Process
+### 7. Download Process
 ```python
 # Navigate to download page
 download_url = input("Enter the file download URL: ")
